@@ -1,0 +1,15 @@
+@import "../../assets/style/general";
+.footer{
+  background-color: $black;
+  color: $light-gray;
+  padding: 40px 10px 40px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  p{
+    box-sizing: border-box;
+    width: 50%;
+  }
+}

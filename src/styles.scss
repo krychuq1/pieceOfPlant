@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/hamburgers/dist/hamburgers.css";
+@import "./assets/style/general";
+//set outline none to all focus elements
+:focus {
+  outline: 0;
+}
+//body
+body{
+  padding: 0;
+  margin: 0;
+  font-family: $primary-font;
+}

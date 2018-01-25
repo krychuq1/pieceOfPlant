@@ -1,0 +1,37 @@
+@import "../../assets/style/general";
+.header{
+  .hamburger{
+    position: absolute;
+    right: 10px;
+    top: 70px;
+  }
+  &--inactive{
+    justify-content: space-between;
+    display: none;
+    padding: 40px 20px;
+
+    &.is-active{
+      display: flex;
+    }
+  }
+  &--active{
+    display: none;
+    background-color: $green;
+    height: 200px;
+    align-items: center;
+    padding-right: 80px;
+    justify-content: flex-end;
+    &.is-active{
+      display: flex;
+    }
+
+    ul{
+      display: flex;
+      list-style: none;
+      font-size: 0.9rem;
+      li{
+        padding: 0 5px;
+      }
+    }
+  }
+}
