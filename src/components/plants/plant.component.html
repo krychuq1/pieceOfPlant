@@ -1,0 +1,63 @@
+<div class="gallery-holder">
+
+
+  <div class="gallery">
+
+    <div class="navigation">
+      <img src="../../assets/images/arrows/arrow.png" alt="arrow" (click)="decrease()">
+      <img src="../../assets/images/arrows/arrow.png" alt="arrow" class="right" (click)="increase()">
+    </div>
+
+    <div class="img-holder one" *ngIf="counter === 1">
+      <img src="../../assets/images/plants/maceta.png" alt="maceta" *ngIf="!showEyes">
+      <img src="../../assets/images/plants/maceta_eyes.png" alt="maceta" *ngIf="showEyes">
+    </div>
+
+    <div class="img-holder two" *ngIf="counter === 2">
+      <img src="../../assets/images/plants/ash.png" alt="ash" *ngIf="!showEyes">
+      <img src="../../assets/images/plants/ash_eyes.png" alt="ash" *ngIf="showEyes">
+    </div>
+
+    <div class="img-holder three" *ngIf="counter === 3">
+      <img src="../../assets/images/plants/back.png" alt="back" *ngIf="!showEyes">
+      <img src="../../assets/images/plants/black_eyes.png" alt="back" *ngIf="showEyes">
+    </div>
+
+    <div class="img-holder four" *ngIf="counter === 4">
+      <img src="../../assets/images/plants/grey.png" alt="grey" *ngIf="!showEyes">
+      <img src="../../assets/images/plants/grey_eyes.png" alt="grey" *ngIf="showEyes">
+    </div>
+  </div>
+
+  <div class="description" *ngIf="counter === 1">
+    <p class="title">Maceta</p>
+    <p >Duis a sem eu velit placerat luctus eget a sem. Vestibulum eget consequat ante.
+    Mauris sit amet ligula auctor, ultricies ex vel, ultrices lacus. Vestibulum lobortis a lorem vitae ultrices.
+    Curabitur vitae lacus pretium, commodo nunc in, convallis urna. Quisque rutrum purus sed bibendum gravida.
+    Maecenas quis ex ac orci imperdiet iaculis.</p>
+  </div>
+
+  <div class="description" *ngIf="counter === 2">
+    <p class="title">Ash</p>
+    <p>Phasellus elementum arcu sem, in vulputate velit porttitor vitae.
+    Mauris tristique scelerisque vulputate. Duis nec odio viverra turpis placerat porttitor non ac odio.
+    Praesent cursus finibus suscipit. Nunc auctor eu tortor quis lacinia.</p>
+  </div>
+
+  <div class="description" *ngIf="counter === 3">
+    <p class="title">Back</p>
+    <p>Duis pellentesque, sapien id sollicitudin sollicitudin, ante tortor placerat felis,
+    vitae vulputate risus ligula nec massa. Pellentesque finibus eget tellus a tristique. In vel diam sed urna
+    efficitur bibendum. Nullam tincidunt sit amet diam quis luctus. Phasellus et ex lacus. Aliquam pretium non
+    mauris tristique sodales.</p>
+  </div>
+
+  <div class="description" *ngIf="counter === 4">
+    <p class="title">Grey</p>
+    <p>Integer iaculis accumsan lacus a lobortis. Suspendisse lacinia faucibus aliquet.
+    Suspendisse vitae nisl velit. Praesent neque justo, lacinia laoreet ligula at, mattis gravida dolor.
+    Nunc non fermentum felis. In vel nisl dolor. Donec ut dolor et quam cursus rutrum eu sed quam. Aliquam enim leo,
+    tempus quis scelerisque vitae.</p>
+  </div>
+
+</div>

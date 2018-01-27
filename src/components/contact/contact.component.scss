@@ -1,0 +1,14 @@
+@import "../../assets/style/general";
+
+.contact-holder{
+  padding: 20px;
+  background-color: $gray-background;
+  border-top-left-radius: 400px 35px;
+
+  h1{
+    color: $green;
+  }
+  .fb{
+    margin-right: 10px;
+  }
+}

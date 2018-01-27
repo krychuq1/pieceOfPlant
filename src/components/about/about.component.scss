@@ -1,0 +1,25 @@
+@import '../../assets/style/general';
+.about-holder{
+  padding: 20px;
+  position: relative;
+  min-height: 600px;
+  border-top-left-radius: 400px 35px;
+
+  .text-holder{
+    padding-right: 90px;
+  }
+  h1{
+    color: $green;
+  }
+  p{
+    font-weight: bold;
+    color: $green;
+  }
+  img{
+    position: absolute;
+    right: 0;
+    bottom: -35px;
+    max-height: 400px;
+    z-index: -1;
+  }
+}
