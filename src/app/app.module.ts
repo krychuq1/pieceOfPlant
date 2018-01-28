@@ -10,6 +10,12 @@ import {PlantComponent} from "../components/plants/plant.component";
 import {OfferComponent} from "../components/offer/offer.component";
 import {AboutComponent} from "../components/about/about.component";
 import {ContactComponent} from "../components/contact/contact.component";
+import {FormBuilder, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -23,9 +29,17 @@ import {ContactComponent} from "../components/contact/contact.component";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatProgressSpinnerModule,
     RouterModule.forRoot(routes),
+    ScrollToModule.forRoot()
+
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

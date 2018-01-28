@@ -1,5 +1,9 @@
 @import "../../assets/style/general";
 .header{
+  background-color: $pink-background;
+  .logo{
+    cursor: pointer;
+  }
   .hamburger{
     position: absolute;
     right: 10px;
@@ -30,6 +34,7 @@
       list-style: none;
       font-size: 0.9rem;
       li{
+        cursor: pointer;
         padding: 0 5px;
       }
     }

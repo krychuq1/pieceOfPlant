@@ -1,6 +1,8 @@
 @import "../../assets/style/general";
 .gallery-holder{
   //border: 1px solid red;
+  overflow: hidden;
+  background-color: $pink-background;
   .gallery{
     position: relative;
     min-height: 400px;
@@ -20,18 +22,38 @@
       width:100%;
       top: 50%;
       z-index: 1;
-
-      .right{
+      .leftArrow{
+        background-image: url("../../assets/images/arrows/arrow.png");
+        background-repeat: no-repeat;
+        width: 28px;
+        height: 38px;
+        cursor: pointer;
+        margin-left: 20px;
+        &:hover{
+          background-image: url("../../assets/images/arrows/full-arrow.png");
+        }
+      }
+      .rightArrow{
+        @extend .leftArrow;
+        margin-left: 0;
+        margin-right: 20px;
         transform: rotate(180deg);
+
       }
     }
   }
   .description{
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+    text-align: justify;
     .title{
       color: $green;
       font-weight: bold;
       font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    p{
+      margin: 0;
     }
   }
 

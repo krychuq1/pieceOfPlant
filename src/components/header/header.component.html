@@ -1,4 +1,6 @@
 <div class="header">
+  <img src="../../assets/images/dots/kropki_600.png" class="dots">
+
   <!--burger -->
   <button class="hamburger hamburger--spin" [ngClass]= "isActive ? 'is-active' : ''" type="button" (click)="burgerTrigger()">
     <span class="hamburger-box">
@@ -8,16 +10,16 @@
 
   <div class="header--inactive" [ngClass]= "!isActive ? 'is-active' : ''">
     <!--logo-->
-    <img src="../../assets/images/header/logo.png" alt="logo">
+    <img src="../../assets/images/header/logo.png" alt="logo" class="logo">
   </div>
 
 
   <div class="header--active" [ngClass]= "isActive ? 'is-active' : ''">
-    <ul>
+    <ul (click)="isActive =!isActive">
       <li>plants</li>
-      <li>services</li>
-      <li>about</li>
-      <li>contact</li>
+      <li [ngx-scroll-to]="'services'">services</li>
+      <li [ngx-scroll-to]="'about'">about</li>
+      <li [ngx-scroll-to]="'contact'">contact</li>
     </ul>
   </div>
 

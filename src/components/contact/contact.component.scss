@@ -1,14 +1,55 @@
 @import "../../assets/style/general";
 
 .contact-holder{
-  padding: 20px;
-  background-color: $gray-background;
+  padding: 20px 20px 40px 20px;
+  background-color: $green-background;
   border-top-left-radius: 400px 35px;
-
+  span{
+    text-align: justify;
+  }
   h1{
     color: $green;
   }
-  .fb{
-    margin-right: 10px;
+  .findUs{
+    margin-top: 40px;
+  }
+  .icons{
+    display: flex;
+    .fb{
+      cursor: pointer;
+      height: 47px;
+      width: 47px;
+      margin-right: 10px;
+      background-image: url("../../assets/images/contact/facebook.png");
+      background-repeat: no-repeat;
+      &:hover{
+        background-image: url("../../assets/images/contact/facebook_on.png");
+      }
+    }
+    .insta{
+      @extend .fb;
+      background-image: url("../../assets/images/contact/instagram.png");
+      &:hover{
+        background-image: url("../../assets/images/contact/instagram_on.png");
+      }
+    }
+  }
+  //.fb{
+  //  margin-right: 10px;
+  //}
+  .form{
+    margin-top: 10px;
+    .block{
+      display: block;
+    }
+    button{
+      cursor: pointer;
+      background: none;
+      border: 1px solid #616161;
+      float: right;
+      padding: 5px 25px;
+      color: #958f8f
+    ;
+    };
   }
 }

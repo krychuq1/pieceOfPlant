@@ -14,11 +14,14 @@
   p{
     font-weight: bold;
     color: $green;
+    margin-bottom: 5px;
+    margin-top: 0;
+
   }
   img{
     position: absolute;
     right: 0;
-    bottom: -35px;
+    bottom: -40px;
     max-height: 400px;
     z-index: -1;
   }

@@ -1,13 +1,51 @@
 <div class="contact-holder">
-  <h1>Contact</h1>
-  <p>Fusce scelerisque eros non gravida venenatis. In sit amet ultrices neque, ut consequat lectus. Fusce nisl enim,
-    aliquet vel maximus et, lacinia sed ipsum. Suspendisse sapien libero, imperdiet vel ipsum ut, feugiat sodales nibh.
-  </p>
-  <h1>Find us:</h1>
+  <h1 id="contact">Contact</h1>
+  <span>Fusce scelerisque eros non gravida venenatis. In sit amet ultrices neque, ut consequat lectus. Fusce nisl enim,
+    aliquet vel maximus et, lacinia sed ipsum.
+  </span>
+
+  <mat-spinner *ngIf="isProcessing "></mat-spinner>
+  <div class="success" *ngIf="!isProcessing && isSent">
+    <p>{{nameController.value}}!</p>
+    <p>Thank you for your message!</p>
+    <!--<button></button>-->
+  </div>
+  <div class="form">
+    <form *ngIf="!isProcessing && !isSent" [formGroup]="contactForm" (ngSubmit)="onSubmitForm()">
+
+      <mat-form-field class="example-full-width block">
+        <input matInput placeholder="name" formControlName="name" type="text">
+        <div *ngIf="nameController.errors && nameController.touched">
+          <mat-error *ngIf="nameController.errors.required">name  is required</mat-error>
+          <mat-error *ngIf="nameController.errors.minlength">name should be at least 3 char long</mat-error>
+        </div>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width block">
+        <input matInput placeholder="email" type= "email" formControlName="email" >
+        <div *ngIf="emailController.errors && emailController.touched">
+          <mat-error *ngIf="emailController.errors.required">email  is required</mat-error>
+          <mat-error *ngIf="emailController.errors.pattern">please enter valid email address</mat-error>
+        </div>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width block">
+        <textarea matInput placeholder="message"  rows="1" formControlName="message"></textarea>
+        <div *ngIf="messageControler.errors && messageControler.touched">
+          <mat-error *ngIf="messageControler.errors.required">message  is required</mat-error>
+          <mat-error *ngIf="messageControler.errors.minlength">message should be at least 10 char long</mat-error>
+        </div>
+      </mat-form-field>
+
+      <button type="submit" [disabled]="!contactForm.valid">send</button>
+    </form>
+  </div>
+
+  <h1 class="findUs">Find us:</h1>
 
   <div class="icons">
-    <img src="../../assets/images/contact/facebook.png" class="fb">
-    <img src="../../assets/images/contact/instagram.png" class="insta">
+    <div class="fb"></div>
+    <div class="insta"></div>
   </div>
 
 </div>

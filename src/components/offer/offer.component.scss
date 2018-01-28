@@ -6,31 +6,35 @@
   clip-path: polygon(86% 10%, 100% 8%, 100% 100%, 0 100%, 0 18%, 14% 17%, 28% 16%, 44% 15%, 62% 13%, 74% 12%);
   position: relative;
   background-color: $gray-background;
-  img{
-    max-width:100%;
-    max-height:100%;
-    position: absolute;
-    bottom: -25px;
-    z-index: -1;
-
-  }
-
-  h1{
-    font-size: 1.5rem;
-    color: $green;
-  }
-  .offer-des{
-    p{
-      color: $green;
-      font-weight: bold;
-      margin-bottom: 5px;
-      margin-top: 35px;
-    }
-  }
+  overflow: hidden;
   .cloud{
     position: absolute;
     margin-top: -150px;
     z-index: -1;
     right: 0;
   }
+  .cactus{
+    max-width:100%;
+    max-height:100%;
+    position: absolute;
+    bottom: -25px;
+    left: -10px;
+    z-index: -1;
+  }
+
+
+  h1{
+    font-size: 1.5rem;
+    color: $green;
+  }
+  .offer-des{
+    text-align: justify;
+    p{
+      color: $green;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+  }
+
 }
