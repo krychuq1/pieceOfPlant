@@ -1,3 +1,6 @@
 @import "colors";
 @import "fonts";
+@import "~breakpoint-sass";
 
+$desktop-up : 1200px;
+$medium-up: 800px;

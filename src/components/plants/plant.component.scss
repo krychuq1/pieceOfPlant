@@ -1,8 +1,43 @@
 @import "../../assets/style/general";
+
 .gallery-holder{
-  //border: 1px solid red;
+
+  margin: 0 auto;
+  position: relative;
+
+  .bottom{
+    bottom: -500px;
+  }
+  //////border: 1px solid red;
   overflow: hidden;
   background-color: $pink-background;
+
+  .navigation{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width:100%;
+    top: 30%;
+    z-index: 1;
+    .leftArrow{
+      background-image: url("../../assets/images/arrows/arrow.png");
+      background-repeat: no-repeat;
+      width: 28px;
+      height: 38px;
+      cursor: pointer;
+      margin-left: 20px;
+      &:hover{
+        background-image: url("../../assets/images/arrows/full-arrow.png");
+      }
+    }
+    .rightArrow{
+      @extend .leftArrow;
+      margin-left: 0;
+      margin-right: 20px;
+      transform: rotate(180deg);
+    }
+  }
+
   .gallery{
     position: relative;
     min-height: 400px;
@@ -15,32 +50,10 @@
         max-height:100%;
       }
     }
-    .navigation{
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width:100%;
-      top: 50%;
-      z-index: 1;
-      .leftArrow{
-        background-image: url("../../assets/images/arrows/arrow.png");
-        background-repeat: no-repeat;
-        width: 28px;
-        height: 38px;
-        cursor: pointer;
-        margin-left: 20px;
-        &:hover{
-          background-image: url("../../assets/images/arrows/full-arrow.png");
-        }
-      }
-      .rightArrow{
-        @extend .leftArrow;
-        margin-left: 0;
-        margin-right: 20px;
-        transform: rotate(180deg);
-
-      }
+    .loader{
+      margin-top: 180px;
     }
+
   }
   .description{
     padding: 0 20px 20px 20px;
@@ -59,3 +72,73 @@
 
 }
 
+//breakpoint for medium
+@include breakpoint($medium-up){
+  .gallery-holder{
+    display: flex;
+    align-items: center;
+    padding: 80px 40px 0 40px;
+    ////border: 1px dashed deeppink;
+
+
+    .navigation{
+      .leftArrow{
+        margin-left: -10px;
+      }
+      .rightArrow{
+        margin-left: 0;
+        margin-right: 30px;
+
+      }
+    }
+    .description{
+      padding-right: 0px;
+      padding-left: 0;
+      padding-top: 150px;
+      width: 50%;
+      ////border: 1px solid blue;
+      div{
+        padding: 0 40px;
+      }
+    }
+      .gallery-limit{
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        .gallery{
+          width: 50%;
+          ////border: 1px solid red;
+
+        }
+      }
+
+    .navigation{
+      left: 20px;
+      right: 20px;
+      top: 50%;
+
+    }
+    .img-holder{
+      img{
+        max-width: none !important;
+      }
+    }
+
+  }
+}
+
+@include breakpoint($desktop-up){
+  .gallery-holder{
+
+    .navigation{
+      .leftArrow{
+        margin-left: 5px;
+      }
+      .rightArrow{
+        margin-left: 0;
+        margin-right: 50px;
+
+      }
+    }
+  }
+}

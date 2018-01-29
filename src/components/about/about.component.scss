@@ -3,8 +3,11 @@
   padding: 20px;
   position: relative;
   min-height: 600px;
-  border-top-left-radius: 400px 35px;
+  //border-top-right-radius: 299px;
+  //border-top-left-radius: 400px 35px;
+  //border: 1px solid red;
 
+  overflow: hidden;
   .text-holder{
     padding-right: 90px;
   }
@@ -16,13 +19,60 @@
     color: $green;
     margin-bottom: 5px;
     margin-top: 0;
-
   }
-  img{
+  .lady{
     position: absolute;
     right: 0;
     bottom: -40px;
     max-height: 400px;
     z-index: -1;
+    &.cactus{
+      display: none;
+    }
   }
+}
+@include breakpoint($medium-up){
+  .about-holder{
+
+    .about-limit{
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: right;
+      position: static;
+      overflow: hidden;
+    }
+    .large{
+
+      //width: 100% !important;
+    }
+    .text-holder{
+      padding-right: 40px;
+      direction:rtl;
+      text-align:justify;
+    }
+    .about-section{
+      width: 50%;
+
+    }
+    h1{
+      font-size: 4rem;
+      margin-right: 40px;
+    }
+    .lady{
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      max-height: none;
+      z-index: -1;
+      display: none;
+      &.cactus{
+        display: block;
+        bottom: auto;
+        z-index: 3;
+      }
+    }
+  }
+
+
 }

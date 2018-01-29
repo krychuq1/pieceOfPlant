@@ -2,7 +2,8 @@
 @import "../node_modules/hamburgers/dist/hamburgers.css";
 @import "./assets/style/general";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+@import './assets/style/material-theme';
+@import "./assets/style/loader";
 //set outline none to all focus elements
 :focus {
   outline: 0;
@@ -28,4 +29,35 @@ h1{
   position: absolute;
   max-width: 100%;
   max-height: 100%;
+  &.small{
+    display: block;
+  }
+  &.large{
+    display: none;
+  }
+}
+
+@include breakpoint($medium-up){
+  .dots{
+    width: auto !important;
+    &.small{
+      display: none;
+    }
+    &.large{
+      display: block;
+      max-width: none;
+      max-height: none;
+    }
+    &.large1{
+      left: 1300px;
+      max-width: none;
+      max-height: none;
+    }
+    &.large2{
+
+      left: 2600px;
+      max-width: none;
+      max-height: none;
+    }
+  }
 }

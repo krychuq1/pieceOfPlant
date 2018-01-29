@@ -1,5 +1,8 @@
 <div class="header">
-  <img src="../../assets/images/dots/kropki_600.png" class="dots">
+  <img src="../../assets/images/dots/kropki_600.png" class="dots small">
+  <img src="../../assets/images/dots/kropki.png" class="dots large">
+  <img src="../../assets/images/dots/kropki.png" class="dots large1">
+  <img src="../../assets/images/dots/kropki.png" class="dots large2">
 
   <!--burger -->
   <button class="hamburger hamburger--spin" [ngClass]= "isActive ? 'is-active' : ''" type="button" (click)="burgerTrigger()">
@@ -11,12 +14,20 @@
   <div class="header--inactive" [ngClass]= "!isActive ? 'is-active' : ''">
     <!--logo-->
     <img src="../../assets/images/header/logo.png" alt="logo" class="logo">
+    <ul class="desktop-nav">
+      <li> plants</li>
+      <li [ngx-scroll-to]="'services'">services</li>
+      <li [ngx-scroll-to]="'about'">about</li>
+      <li [ngx-scroll-to]="'contact'">contact</li>
+    </ul>
   </div>
 
 
   <div class="header--active" [ngClass]= "isActive ? 'is-active' : ''">
+    <img src="../../assets/images/dots/kropki_600.png" class="dots">
+
     <ul (click)="isActive =!isActive">
-      <li>plants</li>
+      <li> plants</li>
       <li [ngx-scroll-to]="'services'">services</li>
       <li [ngx-scroll-to]="'about'">about</li>
       <li [ngx-scroll-to]="'contact'">contact</li>
