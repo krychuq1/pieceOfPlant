@@ -45,8 +45,12 @@
       }
     }
   }
-
-
+  .imgHolder{
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    bottom: -35px;
+  }
 }
 @include breakpoint($medium-up){
   .offer-holder{
