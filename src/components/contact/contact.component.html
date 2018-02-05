@@ -1,11 +1,11 @@
-<div class="contact-holder">
+<div class="contact-holder" id="contact">
  <div class="svgHolder">
    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1366 87.9" style="enable-background:new 0 0 1366 87.9;" xml:space="preserve">
+	 viewBox="0 0 1366 216.6" style="enable-background:new 0 0 1366 216.6;" xml:space="preserve">
 <style type="text/css">
-	.contactSvg{fill:#DADDB8;}
+	.st2{fill:#DADDB8;}
 </style>
-<path class="contactSvg" d="M0,65.7c0,0,591-99,880-54s486,10,486,10v68H0V65.7z"/>
+<path class="st2" d="M2,65.7c0,0,591-99,880-54s486,10,486,10v201H2V65.7z"/>
 </svg>
  </div>
 
@@ -13,9 +13,9 @@
 
 
 
-  <div class="contact-limit">
+  <div class="contact-limit" >
     <div class="contact">
-      <h1 id="contact">Contact</h1>
+      <h1 >Contact</h1>
       <span>Fusce scelerisque eros non gravida venenatis. In sit amet ultrices neque, ut consequat lectus. Fusce nisl enim,
     aliquet vel maximus et, lacinia sed ipsum.
   </span>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="form">
+    <div class="form"  >
       <form *ngIf="!isProcessing && !isSent" [formGroup]="contactForm" (ngSubmit)="onSubmitForm()">
 
         <mat-form-field class="example-full-width block">
@@ -57,7 +57,7 @@
         <button type="submit" [disabled]="!contactForm.valid">send</button>
       </form>
     </div>
-    <div class="contact-footer">
+    <div class="contact-footer" >
       <h1 class="findUs">Find us:</h1>
       <div class="icons">
         <div class="fb"></div>
@@ -65,4 +65,4 @@
       </div>
     </div>
   </div>
-</div>
+</div >

@@ -1,15 +1,20 @@
 @import "../../assets/style/general";
 
 .contact-holder{
+  .contact-limit {
+    padding: 0 20px 80px 20px;
+    margin-top: -77px;
+
+  }
   position: relative;
-  //padding: 20px 20px 40px 20px;
   background-color: $green-background;
+  //border: 1px solid red;
   .svgHolder{
-    border: 1px solid red;
-    position: absolute;
+    //border: 1px solid red;
+    position: relative;
     width: 100%;
-    top: -61px;
-    z-index: 3;
+    top: -44px;
+    z-index: 11;
   }
   span{
     text-align: justify;
@@ -62,13 +67,13 @@
 }
 @include breakpoint($medium-up){
   .contact-holder{
-
     //padding: 20px 20px 75px 20px;
     .contact-limit{
       display: flex;
       flex-wrap: wrap;
       max-width: 1000px;
       margin: 0 auto;
+      margin-top: -111px;
       .findUs{
         font-size: 4rem;
         display: block;
@@ -109,9 +114,54 @@
         }
       }
     }
-
-
   }
 }
 
+@include breakpoint(900px) {
+  .contact-holder {
+    .svgHolder{
+      top: -131px;
+    }
+    .contact-limit{
+      margin-top: -204px;
+    }
+  }
+}
 
+@include breakpoint(1100px) {
+  .contact-holder {
+    .contact-limit{
+      position: relative;
+      z-index: 11;
+      margin-top: -281px;
+
+    }
+  }
+}
+@include breakpoint(1400px) {
+  .contact-holder {
+    .contact-limit{
+      position: relative;
+      z-index: 11;
+      margin-top: -312px;
+
+    }
+  }
+}
+
+@include breakpoint(1600px) {
+  .contact-holder {
+    .contact-limit{
+      margin-top: -336px;
+
+    }
+  }
+}
+@include breakpoint(1800px) {
+  .contact-holder {
+    .contact-limit{
+      margin-top: -364px;
+
+    }
+  }
+}

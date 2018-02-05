@@ -24,6 +24,8 @@ import {trigger, state, style, transition, animate, keyframes, query, stagger} f
 })
 export class HeaderComponent {
   state: string = 'small';
+  public ngxScrollToOffset: number;
+
   //boolean for burger trigger
   isActive: boolean;
   constructor() {
@@ -36,6 +38,6 @@ export class HeaderComponent {
   }
 
   test() {
-    console.log("test, test, test");
+    //console.log("test, test, test");
   }
 }

@@ -2,6 +2,9 @@
 
 .offer-holder{
   //padding: 190px 20px 130px 20px;
+  .offer{
+    padding: 30px 0 190px 0;
+  }
   svg{
     margin-top: -1px;
 
@@ -12,17 +15,18 @@
   overflow: hidden;
   .cloud{
     position: absolute;
-    margin-top: -150px;
-    z-index: -1;
+    margin-top: -65px;
+    margin-right: 40px;
+    z-index: 1;
     right: 0;
   }
   .cactus{
     max-width:100%;
-    max-height:100%;
+    max-height: 246px;
     position: absolute;
-    bottom: -25px;
+    bottom: 6px;
     left: -10px;
-    z-index: -1;
+    z-index: 0;
   }
 
 
@@ -35,6 +39,8 @@
   .offer-text{
     padding: 0 20px;
     .offer-des{
+      z-index: 2;
+      position: relative;
       text-align: justify;
 
       p{
@@ -49,21 +55,39 @@
     position: absolute;
     width: 100%;
     z-index: 3;
-    bottom: -35px;
+    bottom: -7px;
   }
 }
+//570px
+@include breakpoint($mobile-large){
+  .offer-holder{
+    .cactus{
+      bottom: 22px;
+    }
+    .cloud{
+      left: 220px;
+    }
+  }
+}
+
+
 @include breakpoint($medium-up){
   .offer-holder{
+    .cactus{
+      bottom: 31px;
+      z-index: 1;
+    }
     //padding: 190px 0 130px 0;
     .cloud{
       margin-top: -80px;
       left: 80px;
+      z-index: 0;
     }
     .offer{
       display: flex;
       max-width: 1000px;
       margin: 0 auto;
-      padding: 0 40px 80px 40px;
+      padding: 30px 40px 190px 40px;
       ////border: 1px dashed deeppink;
 
       .header{
@@ -76,6 +100,15 @@
           text-align: right;
           padding-right: 40px;
         }
+      }
+      .offerScrollHack{
+        width: 1px;
+        position: absolute;
+        border: 1px solid red;
+        margin-top: 750px;
+
+
+
       }
 
       .offer-text{
@@ -101,5 +134,51 @@
       }
     }
 
+  }
+}
+
+@include breakpoint($desktop-up){
+  .offer-holder{
+    .cactus{
+      max-height: 100%;
+      bottom: 42px;
+    }
+    .cloud{
+      margin-top: -165px;
+      left: 180px;
+    }
+    .offer{
+      padding: 30px 40px 225px 40px;
+
+    }
+  }
+}
+@include breakpoint(1500px){
+  .offer-holder{
+    .cactus{
+      bottom: 60px;
+    }
+    .offer{
+      padding: 30px 40px 250px 40px;
+
+    }
+  }
+}
+@include breakpoint(1700px){
+  .offer-holder{
+    .offer{
+      padding: 30px 40px 290px 40px;
+
+    }
+  }
+}
+@include breakpoint(1900px){
+  .offer-holder{
+    .cactus{
+      bottom: 74px;
+    }
+    .offer{
+      padding: 30px 40px 330px 40px;
+    }
   }
 }

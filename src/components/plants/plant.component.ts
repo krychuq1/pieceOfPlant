@@ -9,7 +9,7 @@ import {Observable} from "rxjs/Observable";
 })
 export class PlantComponent implements AfterViewInit{
   ngAfterViewInit(): void {
-    console.log("DOM fully loaded and parsed 2222");
+    //console.log("DOM fully loaded and parsed 2222");
 
   }
   counter:number;
@@ -22,18 +22,18 @@ export class PlantComponent implements AfterViewInit{
     this.isProcessing = true;
     this.images = [];
     setInterval(()=>{
-      console.log('show eyes');
+      //console.log('show eyes');
       this.showEyes =!this.showEyes;
     },2000);
     setInterval(()=>{
-      this.increase();
+      // this.increase();
     },5000);
 
   }
     loadedImage(nr){
-    console.log('img loaded ', nr);
+    //console.log('img loaded ', nr);
     this.images.push(nr);
-    console.log('loading ', nr);
+    //console.log('loading ', nr);
 
     if(this.images.length === 1 || this.images.length >1){
       this.isProcessing = false;

@@ -1,7 +1,10 @@
 @import "../../assets/style/general";
 
 .gallery-holder{
+  .gallery-limit{
+    min-height: 587px;
 
+  }
   margin: 0 auto;
   position: relative;
 

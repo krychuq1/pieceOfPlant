@@ -62,6 +62,17 @@
     }
   }
 }
+@include breakpoint(500px){
+  .header{
+    &--active{
+      ul{
+        li{
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
 //breakpoint for medium
 @include breakpoint($medium-up){
   .header{
